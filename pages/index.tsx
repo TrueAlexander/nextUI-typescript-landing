@@ -3,6 +3,8 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import { Container, Navbar, Text, Button, Grid, Col } from '@nextui-org/react'
+import InfoCard from '../components/InfoCard'
+
 
 
 const Home: NextPage =  () => {
@@ -46,10 +48,36 @@ const Home: NextPage =  () => {
             <Button size="lg" shadow color="gradient" css={{"width": "70%", "margin": "10px auto 0"}}>Join for Free</Button>
           </Col>
         </Grid>
-
       </Grid.Container>
 
-       {/* 3 displaying Product cards */}
+      {/* 3 displaying Product cards */}
+      <Grid.Container gap={2}>
+        <Grid xs={12} sm={4}>
+          <InfoCard
+            label="Course"
+            title="Learn Next.js with us"
+            imageURL="https://littlevisuals.co/images/red_dawn.jpg"
+            studentCount="3500" 
+          />
+        </Grid>
+        <Grid xs={12} sm={4}>
+          <InfoCard
+            label="Course"
+            title="Learn React.js with us"
+            imageURL="https://littlevisuals.co/images/sunset.jpg"
+            studentCount="6500" 
+          />
+        </Grid>
+        <Grid xs={12} sm={4}>
+          <InfoCard
+            label="Course"
+            title="Learn Node.js with us"
+            imageURL="https://littlevisuals.co/images/tail.jpg"
+            studentCount="2500" 
+          />
+        </Grid>
+      </Grid.Container>
+
     </Container>
   )
 }
